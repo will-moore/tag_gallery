@@ -1,0 +1,16 @@
+
+{% extends "tag_gallery/base.html" %}
+
+{% block content %}
+
+    {% for i in imgs %}
+
+        <div>{{ i.id }}: {{ i.name }}
+            <a href="{% url 'webgateway_full_viewer' i.id %}">
+                <img src="{% url 'webgateway.views.render_thumbnail' i.id %}"/>
+            </a>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

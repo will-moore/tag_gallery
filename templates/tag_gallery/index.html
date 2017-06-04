@@ -1,0 +1,12 @@
+
+{% extends "tag_gallery/base.html" %}
+
+{% block content %}
+
+    {% for t in tag_dict %}
+
+    <p>Tag: {{ t.id }}: <a href="{% url 'tag_gallery_tag' t.id %}">{{ t.name }}</a></p>
+
+    {% endfor %}
+
+{% endblock %}
